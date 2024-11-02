@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eaeaea;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 400px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .category-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .excuse-display {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+  }
+  
+  .generate-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .generate-button:hover {
+    background-color: #218838;
+  }
+  
+  .generate-button:focus {
+    outline: none;
+  }
+  
+  .excuse-display {
+    font-style: italic;  /* Make the excuse display italic for better emphasis */
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eaeaea;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.category-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.excuse-display {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.generate-button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.generate-button:hover {
+  background-color: #218838;
+}
+
+.generate-button:focus {
+  outline: none;
+}
+
+.excuse-display {
+  font-style: italic;  /* Make the excuse display italic for better emphasis */
+}
+  

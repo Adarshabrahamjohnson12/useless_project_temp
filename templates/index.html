@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Excuse Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .category-select, .generate-button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .excuse-display {
+            margin: 20px 0;
+            padding: 15px;
+            background: #eef;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Excuse Generator</h1>
+        <select id="categorySelect" class="category-select">
+            <option value="1">Late to Work/School</option>
+            <option value="2">Missed Assignment</option>
+            <option value="3">Forgot an Anniversary</option>
+            <option value="4">Avoiding a Friend's Party</option>
+            <option value="5">Dodging Chores</option>
+        </select>
+        <div class="excuse-display" id="excuseDisplay">Choose a category and click the button to get an excuse!</div>
+        <button class="generate-button" id="generateButton">Generate Excuse</button>
+    </div>
+    <script>
+        document.getElementById('generateButton').addEventListener('click', async () => {
+            const category = document.getElementById('categorySelect').value;
+            const response = await fetch('/generate-excuse', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ category })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('excuseDisplay').textContent = data.excuse;
+            } else {
+                document.getElementById('excuseDisplay').textContent = data.error;
+            }
+        });
+    </script>
+</body>
+</html>
